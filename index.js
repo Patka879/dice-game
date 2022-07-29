@@ -31,6 +31,15 @@ rollBtn.addEventListener("click", function() {
         playerTwoScoreboard.textContent = playerTwoScore
     }
 
-    playerOneTurn = !playerOneTurn 
+    if (playerOneScore >= 20) {
+        message.textContent = "Player 1 has won! 🥳"
+        rollBtn.style.display = "none"
+        resetBtn.style.display = "block"
+    } else if (playerTwoScore >= 20) {
+        message.textContent = "Player 2 has won! 🎉"
+        rollBtn.style.display = "none"
+        resetBtn.style.display = "block"
+    }
 
+    playerOneTurn = !playerOneTurn 
 })
